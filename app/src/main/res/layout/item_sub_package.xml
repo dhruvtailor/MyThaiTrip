@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp8"
+    android:paddingTop="@dimen/dp8"
+    android:layout_marginBottom="@dimen/dp4">
+
+    <ImageView
+        android:id="@+id/subPackageImage"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/rest_res_1" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp8"
+        android:layout_marginRight="@dimen/dp8"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/subPackageName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp8"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Safari World"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/subPackageInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/colorDarkText2" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/subPackageRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp8"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="₹ 400"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/subPackageAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dp4"
+            app:srcCompat="@drawable/ic_add_circle_primary_24dp" />
+    </RelativeLayout>
+
+</LinearLayout>

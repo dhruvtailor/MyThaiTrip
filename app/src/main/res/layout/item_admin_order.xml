@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp8"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp16">
+
+        <TextView
+            android:id="@+id/pkgOrderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:text="@string/date"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:background="@color/colorDarkText2" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/orderPkgName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="China gate chef"
+                android:textColor="@color/colorDarkText4"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/orderNoOfAdults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Muland, Mumbai"
+                android:textColor="@color/colorDarkText2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/orderNoOfChilds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Muland, Mumbai"
+                android:textColor="@color/colorDarkText2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/orderNoOfInfants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Muland, Mumbai"
+                android:textColor="@color/colorDarkText2"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/orderPkgTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4"
+                android:gravity="right"
+                android:text="‎฿	1225"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/orderPkgStatus"
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_circle_accent"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="Preparing"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

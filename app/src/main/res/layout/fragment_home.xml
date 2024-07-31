@@ -1,0 +1,189 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:id="@+id/frag_home"
+    tools:context="com.cspl.tourtravelapps.fragment.HomeFragment">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp8"
+            android:paddingRight="@dimen/dp8">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="@dimen/dp8"
+                android:layout_weight="1"
+                android:background="@drawable/round_white"
+                android:id="@+id/search_Package"
+                android:drawableLeft="@drawable/ic_search_gray_24dp"
+                android:drawablePadding="@dimen/dp8"
+                android:hint="@string/hint_home_search"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/dp8"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:id="@+id/refine"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:visibility="gone"
+                android:background="@drawable/round_white">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_tune_gray_24dp" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp4"
+            android:text="Filter by:"
+            android:textColor="@color/colorDarkText3"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/noraml"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="@dimen/dp4"
+                android:background="@drawable/bg_primary_rounded_corner_8dp"
+                android:text="Normal"
+                android:textAllCaps="false"
+                android:layout_weight="0.5"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/transfer"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="@dimen/dp4"
+                android:background="@drawable/bg_primary_rounded_corner_8dp"
+                android:text="Transfer"
+                android:layout_weight="0.5"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp8"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="@dimen/dp16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp8"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/dp4"
+                        android:paddingTop="@dimen/dp4"
+                        android:text="@string/label_order"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp4"
+                        android:paddingTop="@dimen/dp4"
+                        android:text="View all"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/dp4"
+                    android:paddingTop="@dimen/dp4"
+                    android:text="@string/label_restaurants"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerPackages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:layout_marginRight="@dimen/dp8" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
